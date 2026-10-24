@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: settlement-service
+  datasource:
+    url: jdbc:postgresql://localhost:5438/settlement
+    username: platform
+    password: platform
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  kafka:
+    bootstrap-servers: localhost:9099
+  rabbitmq:
+    host: localhost
+    port: 5678
+    username: platform
+    password: platform
+    listener:
+      simple:
+        default-requeue-rejected: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health

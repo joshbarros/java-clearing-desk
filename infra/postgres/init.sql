@@ -1,0 +1,3 @@
+CREATE DATABASE books;
+CREATE DATABASE screening;
+CREATE DATABASE settlement;
